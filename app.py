@@ -18,9 +18,18 @@ def convert_folder():
     # Request the data to the user
     source_path = input("Ingrese la ruta de la carpeta que contiene las imagenes: ")
     output_file_name = input("Ingrese la ruta de salida del archivo y el nombre: ")
+
+    # Showing files in the source path
+    archivos_path = listdir(source_path)
+    archivos_path.sort()
+    list_files = []
+
+    for files in archivos_path:
+        list_files.append(source_path+"/"+files)
+        print(files)
     # Call the generator class
     convert = Convert(source_path, output_file_name)
-    convert.generate()
+    convert.generate(list_files)
 
 entrada = 0
 while entrada != 3:
