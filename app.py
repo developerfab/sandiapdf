@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
+
 from convert import *
 
 def menu():
@@ -12,7 +14,24 @@ def menu():
     print("| 3 - Exit                          |")
     print("·-----------------------------------·")
 
+def convert_folder():
+    # Request the data to the user
+    source_path = input("Ingrese la ruta de la carpeta que contiene las imagenes: ")
+    output_file_name = input("Ingrese la ruta de salida del archivo y el nombre: ")
+    # Call the generator class
+    convert = Convert(source_path, output_file_name)
+    convert.generate()
+
 entrada = 0
 while entrada != 3:
     menu()
-    entrada = input("> ")
+    entrada = int(input("> "))
+    if entrada == 2:
+        os.system('cls')
+        os.system('clear')
+        convert_folder()
+    elif entrada == 3:
+        print("Gracias por usar la app, adios!")
+        break
+    else:
+        print("Opción no valida")
