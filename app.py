@@ -28,13 +28,26 @@ def convert_folder():
         list_files.append(source_path+"/"+files)
         print(files)
     # Call the generator class
-    convert = Convert(source_path, output_file_name)
+    convert = Convert(output_file_name)
+    convert.generate(list_files)
+
+def convert_image():
+    image_path = input("Ingrese la ruta de la imagen y el nombre: ")
+    output_file_name = input("Ingrese la ruta de salida del archivo y el nombre: ")
+    list_files = []
+    list_files.append(image_path)
+    # Call the generator class
+    convert = Convert(output_file_name)
     convert.generate(list_files)
 
 entrada = 0
 while entrada != 3:
     menu()
     entrada = int(input("> "))
+    if entrada == 1:
+        os.system('cls')
+        os.system('clear')
+        convert_image()
     if entrada == 2:
         os.system('cls')
         os.system('clear')

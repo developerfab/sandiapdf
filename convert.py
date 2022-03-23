@@ -10,17 +10,10 @@ import os
 import tempfile
 
 class Convert:
-    def __init__(self, folder_path, output_file_name):
-        self.folder_path = folder_path
+    def __init__(self, output_file_name):
         self.output_file_name = output_file_name
 
     def generate(self, list_files):
-        # Showing files in the source path
-        # archivos_path = listdir(self.folder_path)
-        # archivos_path.sort()
-
-        # for files in archivos_path:
-        #     print(files)
         # files_b is a list that store each pdf file generated.
         files_b = []
         # It convert each file in the folder
