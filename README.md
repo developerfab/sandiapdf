@@ -8,7 +8,7 @@ This app generates pdf files from one or multiple images in a folder
 
 ## How install it?
 
-It recommend to generate a virtual environment and install the requeriments there with the command
+It suggests to generate a virtual environment and install the requeriments there with the command
 
 ```
 pip3 install -r requirements.txt
@@ -21,5 +21,4 @@ Is necessary enable your envorinment and run the next command in your terminal:
 ```
 python3 app.py
 ```
-
 
