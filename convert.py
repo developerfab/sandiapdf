@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from PIL import Image
-from PyPDF2 import PdfFileMerger
+from PyPDF2 import PdfMerger
 from os import listdir
 
 import img2pdf
@@ -30,7 +30,7 @@ class Convert:
                 files_b.append(output_file)
 
         # It creates a new instance of PdfFileMerger
-        file_merged = PdfFileMerger()
+        file_merged = PdfMerger()
         # It adds each file in the list in a file
         for file in files_b:
             file_merged.append(file)
